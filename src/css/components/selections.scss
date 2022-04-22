@@ -1,0 +1,333 @@
+// variables
+$entireFontColor: white;
+$darkWhite: rgb(230, 230, 230);
+$lightGreyColor: #c7c7ca;
+$bigFont: 40px;
+$smallFont: 20px;
+$backgroundOpa: rgba(0, 0, 0, 0.4);
+
+.sec_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 15px;
+}
+
+.sec_txt_box {
+  @extend %flexColumn;
+  margin-top: 80px;
+}
+
+.sec_title {
+  margin-bottom: 40px;
+  font-size: $bigFont;
+  font-weight: 600;
+  text-align: center;
+}
+
+.sec_txt {
+  margin-bottom: 40px;
+  font-size: $smallFont;
+  text-align: center;
+}
+
+// section1
+.sec1_idea_btn {
+  width: 325px;
+  padding: 20px 20px;
+  border-radius: 40px;
+  background-color: $backgroundOpa;
+  text-align: center;
+  font-size: $smallFont;
+  font-weight: 600;
+}
+
+.sec_link_box {
+  display: flex;
+  width: 100%;
+  height: 152px;
+
+  .sec1_tap:nth-child(1) {
+    border-top: 3px solid #22adb9;
+    position: relative;
+    z-index: 1;
+  }
+
+  .sec1_tap:nth-child(1)::after {
+    background-color: #22adb9;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top center;
+    z-index: -1;
+    transition: transform 0.4s;
+  }
+
+  .sec1_tap:nth-child(1):hover::after {
+    transform: scaleY(1);
+  }
+
+  .sec1_tap:nth-child(2) {
+    margin: 0 3px;
+    border-top: 3px solid #1b5bbe;
+    position: relative;
+    z-index: 1;
+  }
+
+  .sec1_tap:nth-child(2)::after {
+    background-color: #1b5bbe;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top center;
+    z-index: -1;
+    transition: transform 0.4s;
+  }
+
+  .sec1_tap:nth-child(2):hover::after {
+    transform: scaleY(1);
+  }
+
+  .sec1_tap:nth-child(3) {
+    border-top: 3px solid #d93f69;
+    position: relative;
+    z-index: 1;
+  }
+
+  .sec1_tap:nth-child(3)::after {
+    background-color: #d93f69;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top center;
+    z-index: -1;
+    transition: transform 0.4s;
+  }
+
+  .sec1_tap:nth-child(3):hover::after {
+    transform: scaleY(1);
+  }
+
+  .sec_tap {
+    @extend %flexColumn;
+    width: 100%;
+    height: 100%;
+    background-color: $backgroundOpa;
+
+    .sec1_tap_icon {
+      width: 100%;
+      height: 72px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .sec_tap_desc {
+      margin-top: 20px;
+      font-size: $smallFont;
+      font-weight: 600;
+    }
+  }
+}
+
+// section2
+.sec2_link_box {
+  width: 100%;
+  padding: 0 15px;
+  margin-bottom: 50px;
+
+  .sec2_tap {
+    .sec2_tap_link {
+      padding: 20px 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid $darkWhite;
+
+      i,
+      div {
+        font-size: 18px;
+        font-weight: 600;
+        color: $darkWhite;
+        transition: color 0.3s;
+      }
+    }
+
+    .sec2_tap_link:hover {
+      i,
+      div {
+        color: $entireFontColor;
+      }
+    }
+  }
+}
+
+// section3
+.sec3_link_box {
+  width: 100%;
+  height: 280px;
+
+  .sec3_tap {
+    height: 100%;
+    border-radius: 10px;
+    transition: background-color 0.4s;
+
+    .sec3_link {
+      @extend %flexColumn;
+
+      .sec3_tap_icon {
+        width: 135px;
+        height: 135px;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      div:nth-child(2) {
+        margin: 15px 0;
+      }
+
+      .sec3_coming_soon {
+        @extend %alignCenter;
+        justify-content: center;
+
+        .coming_soon_msg {
+          @extend %flexColumn;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          text-align: center;
+          background-color: rgba(55, 55, 73, 0.9);
+
+          span {
+            margin-top: 5px;
+            color: $lightGreyColor;
+          }
+        }
+      }
+    }
+  }
+
+  .sec3_tap:nth-child(2) {
+    margin: 0 1px;
+  }
+
+  .sec3_tap:hover {
+    background-color: #2a8797;
+    opacity: 0.8;
+  }
+}
+
+// section4
+.section4 {
+  .sec4_container {
+    @extend %flexColumn;
+    padding: 15px 15px 0 15px;
+
+    .sec4_tap_list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+
+      li {
+        width: 33%;
+        background-color: $backgroundOpa;
+        text-align: center;
+        line-height: 50px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      li:nth-child(1) {
+        background-color: #c71c30;
+      }
+
+      li:hover {
+        border: 1px solid #c71c30;
+      }
+    }
+
+    .img_wrap {
+      width: 100%;
+      height: 100%;
+
+      .img_box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .sec4_imgs {
+          width: 290px;
+          height: 200px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          margin: 40px 20px 0 20px;
+          padding: 10px;
+
+          li {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 100%;
+
+            span {
+              font-size: 18px;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+
+    .all_img_btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 30px 0 80px 0;
+      width: 207px;
+      height: 60px;
+      border: 2px solid white;
+      border-radius: 120px;
+      transition: border 0.3s;
+      transition: background-color 0.3s;
+
+      span {
+        font-size: 18px;
+        font-weight: 600;
+
+        .plus {
+          margin-left: 10px;
+          transition: all ease 0.6s;
+        }
+      }
+    }
+
+    .all_img_btn:hover {
+      border: 2px solid #c71c30;
+      background-color: $backgroundOpa;
+
+      .plus {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+/*# sourceMappingURL=selections.scss.map */
