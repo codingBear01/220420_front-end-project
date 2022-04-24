@@ -1,0 +1,64 @@
+// variables
+$entireFontColor: white;
+$bigFont: 40px;
+$normalFont: 25px;
+
+main {
+  .main-page_wrap {
+    position: relative;
+
+    .main-page {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      .txt-box {
+        position: absolute;
+        top: 45%;
+        left: 15%;
+        z-index: 1;
+      }
+
+      .txt1,
+      .txt7 {
+        font-size: $bigFont;
+      }
+
+      .txt2,
+      .txt3,
+      .txt4,
+      .txt5,
+      .txt6 {
+        font-size: $normalFont;
+      }
+    }
+
+    .scroll_wrap {
+      position: absolute;
+      @extend %flexColumn;
+      bottom: 15%;
+      left: 50%;
+      font-size: 18px;
+    }
+
+    i {
+      position: absolute;
+      margin-top: 10px;
+      left: 50.5%;
+      font-size: 40px;
+      animation: scrollAnimation 2s linear infinite alternate;
+    }
+  }
+}
+
+@keyframes scrollAnimation {
+  0% {
+    bottom: 5%;
+  }
+
+  100% {
+    bottom: 7%;
+  }
+}
+
+/*# sourceMappingURL=main_page.scss.map */
